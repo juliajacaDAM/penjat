@@ -15,9 +15,6 @@ public class Penjat {
         }
         tauler.inicialitzarPartida(paraula, Integer.parseInt(intents));
         System.out.println(tauler.imprimir());
-        boolean guanyador = false;
-
-
         while (!tauler.hasGuanyat() && tauler.getIntents() > 0){
             System.out.println(tauler.imprimirVides());
             String letra = Util.makeQuestion("Indica la lletra");
