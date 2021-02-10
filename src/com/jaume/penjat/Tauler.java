@@ -3,8 +3,8 @@ package com.jaume.penjat;
 public class Tauler {
   private char[] paraulaSecreta;
   private String[] palabraEndevinada;
-  private int intentos;
-  private int totalIntentos;
+  private int intents;
+  private int totalIntents;
 
   public char[] getParaulaSecreta() {
       return paraulaSecreta;
@@ -22,20 +22,35 @@ public class Tauler {
       this.palabraEndevinada = palabraEndevinada;
   }
 
-  public int getIntentos() {
-      return intentos;
+  public int getIntents() {
+      return intents;
   }
 
-  public void setIntentos(int intentos) {
-      this.intentos = intentos;
+  public void setIntents(int intents) {
+      this.intents = intents;
   }
 
-  public int getTotalIntentos() {
-      return totalIntentos;
+  public int getTotalIntents() {
+      return totalIntents;
   }
 
-  public void setTotalIntentos(int totalIntentos) {
-      this.totalIntentos = totalIntentos;
+  public void setTotalIntents(int totalIntents) {
+      this.totalIntents = totalIntents;
   }
    
+
+  public void inicialitzarPartida(String palabra, int intentos){
+      this.paraulaSecreta = new char[palabra.length()];
+      for(int i =0; i <palabra.length(); i++){
+          this.paraulaSecreta[i] = charAt(i)
+      }
+      this.palabraEndevinada = new String(palabra.length());
+      for(int i = 0 ; i < palabra.length(); i++){
+          if(palabra.charAt(i) == new Character(value = ' ')){
+              this.palabraEndevinada[i] == " ";
+          } 
+      }
+      this.setIntents(intentos);
+      this.setTotalIntents(intentos)
+  }
 }
